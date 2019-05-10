@@ -33,7 +33,7 @@ class sudoku:
 
 
     def find_box_rdomain(self,model):
-        """ find boxs domain in raw"""
+        """ find boxs domain in row"""
         not_empty_boxs=[]
         for row in model:
             for item1 in row:
@@ -79,16 +79,6 @@ class sudoku:
         self.find_box_cdomain(model)
 
         return model
-
-
-    def hash(self,model):
-        """ create hash of model to use in tree"""
-        hash=''
-        for row in model:
-            for number in row:
-                hash+=str(number[0])
-
-        return hash
 
     def find_min(self,model):
         """ finding minimum domain in model"""
